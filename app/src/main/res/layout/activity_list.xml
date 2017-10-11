@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="vertical" android:padding="16dp"
     tools:context="com.example.sanjum.kotlindemo.ListActivity">
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:layout_weight="1"
             android:text="NAME"
             android:textColor="@color/colorPrimary"
-            android:textSize="26sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
@@ -27,7 +27,7 @@
             android:gravity="end"
             android:text="Address"
             android:textColor="@color/colorPrimary"
-            android:textSize="26sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
 

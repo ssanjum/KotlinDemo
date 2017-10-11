@@ -40,8 +40,8 @@ class ListActivity : AppCompatActivity() {
 
         adapter.setOnListClickListener(object :ListAdapter.OnListClickListener{
             override fun onItemClick(pos: Int) {
-
-                toast("clicked on"+pos)
+             val model:ListModel=   adapter.getnameAtPosition(pos)
+                toast("clicked on" + model.name + " at position " + pos)
             }
         })
     }

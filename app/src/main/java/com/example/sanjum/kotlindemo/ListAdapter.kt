@@ -13,7 +13,7 @@ import android.widget.TextView
  */
 class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
-    var listener:OnListClickListener?=null
+    var listener: OnListClickListener? = null
 
     override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
         val listUser: ListModel = listmodel[position]
@@ -21,13 +21,19 @@ class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<Li
         holder?.textViewAddress?.text = listUser.address
         holder?.linearLayout?.setOnClickListener { listener?.onItemClick(position) }
     }
-    interface OnListClickListener{
-        fun onItemClick(pos:Int)
+
+    interface OnListClickListener {
+        fun onItemClick(pos: Int)
     }
 
-    fun setOnListClickListener(listener:OnListClickListener)
-    {
-        this.listener=listener
+    fun setOnListClickListener(listener: OnListClickListener) {
+        this.listener = listener
+
+    }
+
+    fun getnameAtPosition(pos: Int): ListModel {
+        val listUser: ListModel = listmodel[pos]
+        return listUser;
 
     }
 
@@ -43,7 +49,7 @@ class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<Li
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewName = itemView.findViewById<TextView>(R.id.tv_name)
         val textViewAddress = itemView.findViewById<TextView>(R.id.tv_address)
-        val linearLayout=itemView.findViewById<LinearLayout>(R.id.ll_item)
+        val linearLayout = itemView.findViewById<LinearLayout>(R.id.ll_item)
 
 
     }
