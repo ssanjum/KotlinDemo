@@ -18,7 +18,7 @@ class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<Li
     override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
         val listUser: ListModel = listmodel[position]
         holder?.textViewName?.text = listUser.name
-        holder?.textViewAddress?.text = listUser.address
+        holder?.textViewAddress?.text = listUser.genure
         holder?.linearLayout?.setOnClickListener { listener?.onItemClick(position) }
     }
 

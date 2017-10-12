@@ -5,15 +5,13 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import org.jetbrains.anko.toast
+import android.widget.EditText
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var btnShowText: Button
     lateinit var btnNextScreen: Button
     lateinit var btnClear: Button
-    var textView: TextView? = null
+    var etText: EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,20 +21,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnShowText.setOnClickListener(this)
         btnNextScreen.setOnClickListener(this)
         btnClear.setOnClickListener(this)
-        textView = findViewById(R.id.tvTextView)
+        etText = findViewById(R.id.etText)
     }
 
     override fun onClick(v: View?) {
 
         if (v?.id == R.id.btnShowText) {
-            textView?.text = "WelCome To Kotlin"
+            etText?.setText("Welcome To Kotlin")
         }
         if (v?.id == R.id.btnNext) {
             val intent = Intent(this, ListActivity::class.java)
             startActivity(intent)
         }
         if (v?.id == R.id.btnClear) {
-            textView?.text=""
+            etText?.setText("")
         }
 
     }

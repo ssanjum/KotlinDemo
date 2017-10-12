@@ -3,14 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="@drawable/gradient_animation_list"
     android:orientation="vertical"
     tools:context="com.example.sanjum.kotlindemo.MainActivity">
 
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_kotlin"/>
+
     <LinearLayout
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="60dp"
         android:padding="16dp">
 
         <Button
@@ -32,15 +41,22 @@
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ClearText" />
+        android:layout_gravity="center"
+        android:text="Clear Text" />
 
-    <TextView
-        android:id="@+id/tvTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <EditText
+        android:id="@+id/etText"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="26dp"
-        android:textStyle="bold" />
+        android:inputType="none"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusableInTouchMode="false"
+        android:textSize="20dp"
+        android:background="@drawable/shape_rounded_white"
+       />
 
 </LinearLayout>
