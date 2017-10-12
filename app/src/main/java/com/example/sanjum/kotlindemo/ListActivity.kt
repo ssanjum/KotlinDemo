@@ -19,30 +19,40 @@ class ListActivity : AppCompatActivity() {
         val listModel = ArrayList<ListModel>()
 
         listModel.add(ListModel("Mad Max: Fury Road", "Action & Adventure"))
-                listModel.add(ListModel("Inside Out", "Animation, Kids & Family"))
-                listModel.add(ListModel("Star Wars: Episode VII - The Force Awakens", "Action"))
-                listModel.add(ListModel("Shaun the Sheep", "Animation"))
-                listModel.add(ListModel("The Martian", "Science Fiction & Fantasy"))
-                listModel.add(ListModel("Mission: Impossible Rogue Nation", "Action"))
-                listModel.add(ListModel("Up", "Animation"))
-                listModel.add(ListModel("Star Trek", "Science Fiction"))
-                listModel.add(ListModel("The LEGO Movie", "Animation"))
-                listModel.add(ListModel("Iron Man", "Action & Adventure"))
-                listModel.add(ListModel("Aliens", "Science Fiction"))
-                listModel.add(ListModel("Chicken Run", "Animation"))
-                listModel.add(ListModel("Back to the Future", "Science Fiction"))
-                listModel.add(ListModel("Raiders of the Lost Ark", "Action & Adventure" ))
-                listModel.add(ListModel("Goldfinger", "Action & Adventure" ))
-                listModel.add(ListModel("Guardians of the Galaxy", "Science Fiction & Fantasy"))
+        listModel.add(ListModel("Inside Out", "Animation, Kids & Family"))
+        listModel.add(ListModel("Star Wars: Episode VII - The Force Awakens", "Action"))
+        listModel.add(ListModel("Shaun the Sheep", "Animation"))
+        listModel.add(ListModel("The Martian", "Science Fiction & Fantasy"))
+        listModel.add(ListModel("Mission: Impossible Rogue Nation", "Action"))
+        listModel.add(ListModel("Up", "Animation"))
+        listModel.add(ListModel("Star Trek", "Science Fiction"))
+        listModel.add(ListModel("The LEGO Movie", "Animation"))
+        listModel.add(ListModel("Iron Man", "Action & Adventure"))
+        listModel.add(ListModel("Aliens", "Science Fiction"))
+        listModel.add(ListModel("Chicken Run", "Animation"))
+        listModel.add(ListModel("Back to the Future", "Science Fiction"))
+        listModel.add(ListModel("Raiders of the Lost Ark", "Action & Adventure"))
+        listModel.add(ListModel("Goldfinger", "Action & Adventure"))
+        listModel.add(ListModel("Guardians of the Galaxy", "Science Fiction & Fantasy"))
+        listModel.add(ListModel("Back to the Future", "Science Fiction"))
+        listModel.add(ListModel("Raiders of the Lost Ark", "Action & Adventure"))
+        listModel.add(ListModel("Goldfinger", "Action & Adventure"))
+        listModel.add(ListModel("Guardians of the Galaxy", "Science Fiction & Fantasy"))
+        listModel.add(ListModel("The Martian", "Science Fiction & Fantasy"))
+        listModel.add(ListModel("Mission: Impossible Rogue Nation", "Action"))
+        listModel.add(ListModel("Up", "Animation"))
+        listModel.add(ListModel("Star Trek", "Science Fiction"))
+        listModel.add(ListModel("The LEGO Movie", "Animation"))
+        listModel.add(ListModel("Iron Man", "Action & Adventure"))
 
+        val adapter = ListAdapter(listModel)
+        recyClerView.adapter = adapter
 
-        val adapter=ListAdapter(listModel)
-        recyClerView.adapter=adapter
-
-        adapter.setOnListClickListener(object :ListAdapter.OnListClickListener{
+        adapter.setOnListClickListener(object : ListAdapter.OnListClickListener {
             override fun onItemClick(pos: Int) {
-             val model:ListModel=   adapter.getnameAtPosition(pos)
+                val model: ListModel = adapter.getnameAtPosition(pos)
                 toast("clicked on" + model.name + " at position " + pos)
+
             }
         })
     }
