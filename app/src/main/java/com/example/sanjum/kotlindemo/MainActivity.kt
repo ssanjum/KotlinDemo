@@ -8,33 +8,35 @@ import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    lateinit var btnShowText: Button
+
     lateinit var btnNextScreen: Button
-    lateinit var btnClear: Button
+    lateinit var buttonAction: Button
     var etText: EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnNextScreen = findViewById(R.id.btnNext)
-        btnShowText = findViewById(R.id.btnShowText)
-        btnClear = findViewById(R.id.btnClear)
-        btnShowText.setOnClickListener(this)
+        buttonAction = findViewById(R.id.button_action)
         btnNextScreen.setOnClickListener(this)
-        btnClear.setOnClickListener(this)
+        buttonAction.setOnClickListener(this)
         etText = findViewById(R.id.etText)
     }
 
     override fun onClick(v: View?) {
 
-        if (v?.id == R.id.btnShowText) {
-            etText?.setText(R.string.welcome_msg)
-        }
         if (v?.id == R.id.btnNext) {
             val intent = Intent(this, ListActivity::class.java)
             startActivity(intent)
         }
-        if (v?.id == R.id.btnClear) {
-            etText?.setText("")
+        if (v?.id == R.id.button_action) {
+            if (etText?.text!!.isEmpty()) {
+                etText?.setText(R.string.welcome_msg)
+                buttonAction.setText("Clear Text")
+            } else {
+                etText?.setText("")
+                buttonAction.setText("Show Text")
+            }
+
         }
 
     }

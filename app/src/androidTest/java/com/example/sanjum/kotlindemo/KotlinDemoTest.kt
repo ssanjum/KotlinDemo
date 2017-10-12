@@ -1,25 +1,18 @@
 package com.example.sanjum.kotlindemo
 
-import android.app.PendingIntent.getActivity
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions
 import android.support.test.espresso.action.ViewActions.click
-import android.support.test.espresso.assertion.ViewAssertions
-import android.support.test.espresso.assertion.ViewAssertions.matches
 import android.support.test.espresso.contrib.RecyclerViewActions
 import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import android.support.v7.widget.RecyclerView
-import android.widget.TextView
 import org.hamcrest.Matchers.*
-import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
-import android.support.test.espresso.matcher.RootMatchers.withDecorView
-import android.support.test.espresso.Espresso.onView
 
 
 /**
@@ -41,7 +34,7 @@ class KotlinDemoTest {
 
     @Test
     fun verifyWelcomeMessage() {
-        onView(withId(R.id.btnShowText)).perform(ViewActions.click())
+        onView(withId(R.id.button_action)).perform(ViewActions.click())
         Thread.sleep(2000)
         allOf(withId(R.id.etText), withText(R.string.welcome_msg)).matches(isDisplayed())
         Thread.sleep(2000)
@@ -49,10 +42,10 @@ class KotlinDemoTest {
 
     @Test
     fun clearWelcomeMessage() {
-        onView(withId(R.id.btnShowText)).perform(ViewActions.click())
+        onView(withId(R.id.button_action)).perform(ViewActions.click())
         allOf(withId(R.id.etText), withText(R.string.welcome_msg)).matches(isDisplayed())
         Thread.sleep(2000)
-        onView(withId(R.id.btnClear)).perform(click())
+        onView(withId(R.id.button_action)).perform(click())
         Thread.sleep(2000)
         allOf(withId(R.id.etText), withText(R.string.welcome_msg)).matches(not(isDisplayed()))
         Thread.sleep(1000)
