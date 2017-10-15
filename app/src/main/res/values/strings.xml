@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">KotlinDemo</string>
     <string name="welcome_msg">WelCome To Kotlin</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="castAndCrew">Cast and Crew</string>
 </resources>

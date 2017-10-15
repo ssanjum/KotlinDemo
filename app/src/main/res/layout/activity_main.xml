@@ -3,49 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_animation_list"
     android:orientation="vertical"
     tools:context="com.example.sanjum.kotlindemo.MainActivity">
 
-    <ImageView
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_kotlin" />
-
-
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="36dp"
-        android:padding="16dp"
-        android:text="Next Screen" />
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_animation_list"
+
+        android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/button_action"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:padding="16dp"
-        android:text="Show Text" />
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_kotlin" />
 
-    <EditText
-        android:id="@+id/etText"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/shape_rounded_white"
-        android:clickable="false"
-        android:cursorVisible="false"
-        android:focusableInTouchMode="false"
-        android:gravity="center"
-        android:inputType="none"
-        android:textSize="20dp" />
 
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="36dp"
+            android:padding="16dp"
+            android:text="Movies" />
+
+
+        <Button
+            android:id="@+id/button_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="16dp"
+            android:text="Show Text" />
+
+        <EditText
+            android:id="@+id/etText"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rounded_white"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:inputType="none"
+            android:textSize="20dp" />
+    </LinearLayout>
 </LinearLayout>

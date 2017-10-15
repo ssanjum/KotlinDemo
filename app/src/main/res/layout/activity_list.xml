@@ -3,14 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_animation_list"
     android:orientation="vertical"
-    android:padding="4dp"
+
     tools:context="com.example.sanjum.kotlindemo.ListActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyCler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_animation_list"
+        android:padding="4dp" />
 
 </LinearLayout>

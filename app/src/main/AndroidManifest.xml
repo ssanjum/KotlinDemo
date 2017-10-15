@@ -16,10 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListActivity"
-            android:label="List">
+        <activity
+            android:name=".ListActivity"
+            android:label="Movie List"
+            android:theme="@style/Boby"></activity>
+        <activity
+            android:name=".PagerActivity"
+            android:label="Movie Detail" />
 
-        </activity>
+
     </application>
 
 </manifest>

@@ -19,6 +19,8 @@ class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<Li
         val listUser: ListModel = listmodel[position]
         holder?.textViewName?.text = listUser.name
         holder?.textViewAddress?.text = listUser.genure
+        holder?.textViewRating?.text = listUser.rating.toString()
+        holder?.textViewYear?.text = listUser.year.toString()
         holder?.linearLayout?.setOnClickListener { listener?.onItemClick(position) }
     }
 
@@ -33,7 +35,7 @@ class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<Li
 
     fun getnameAtPosition(pos: Int): ListModel {
         val listUser: ListModel = listmodel[pos]
-        return listUser;
+        return listUser
 
     }
 
@@ -50,6 +52,8 @@ class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<Li
         val textViewName = itemView.findViewById<TextView>(R.id.tv_name)
         val textViewAddress = itemView.findViewById<TextView>(R.id.tv_address)
         val linearLayout = itemView.findViewById<LinearLayout>(R.id.ll_item)
+        val textViewRating = itemView.findViewById<TextView>(R.id.tv_rating)
+        val textViewYear = itemView.findViewById<TextView>(R.id.tv_year)
 
 
     }
