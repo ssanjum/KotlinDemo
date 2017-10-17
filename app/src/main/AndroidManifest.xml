@@ -18,11 +18,11 @@
         </activity>
         <activity
             android:name=".ListActivity"
-            android:label="Movie List"
+            android:label="Movies List"
             android:theme="@style/Boby"></activity>
         <activity
             android:name=".PagerActivity"
-            android:label="Movie Detail" />
+            android:label="Details" />
 
 
     </application>

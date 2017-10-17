@@ -3,7 +3,7 @@ package com.example.sanjum.kotlindemo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.sanjum.kotlindemo.fragments.DetailsFragment
+import com.example.sanjum.kotlindemo.fragments.InfoFragment
 import com.example.sanjum.kotlindemo.fragments.MoviesFragment
 import kotlinx.android.synthetic.main.activity_pager.*
 import kotlinx.android.synthetic.main.appbar_main.*
@@ -24,10 +24,10 @@ class PagerActivity : AppCompatActivity() {
                 finish()
             }
         })
-        var listmodel: ListModel = intent.getSerializableExtra("LIST") as ListModel
+        var listmodel: MovieListModel = intent.getSerializableExtra("LIST") as MovieListModel
         customPagerAdapter = CustomPagerAdapter(supportFragmentManager)
-        customPagerAdapter?.addFragment(MoviesFragment().newInstance(listmodel), "Movies")
-        customPagerAdapter?.addFragment(DetailsFragment().newInstance(listmodel), "Details")
+        customPagerAdapter?.addFragment(MoviesFragment().newInstance(listmodel), "Movie")
+        customPagerAdapter?.addFragment(InfoFragment().newInstance(listmodel), "Info")
         pager.adapter = customPagerAdapter
         tabbLayout.setupWithViewPager(pager)
 

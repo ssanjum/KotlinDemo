@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="36dp"
+            android:background="@drawable/button_bck_ground"
             android:padding="16dp"
             android:text="Movies" />
 
@@ -44,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:background="@drawable/button_bck_ground"
             android:padding="16dp"
             android:text="Show Text" />
 
@@ -57,7 +59,7 @@
             android:clickable="false"
             android:cursorVisible="false"
             android:focusableInTouchMode="false"
-            android:gravity="center"
+            android:gravity="center" android:textColor="@color/purple"
             android:inputType="none"
             android:textSize="20dp" />
     </LinearLayout>

@@ -11,12 +11,12 @@ import android.widget.TextView
 /**
  * Created by sanjum on 10/11/2017.
  */
-class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListAdapter(val listmodel: ArrayList<MovieListModel>) : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     var listener: OnListClickListener? = null
 
     override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
-        val listUser: ListModel = listmodel[position]
+        val listUser: MovieListModel = listmodel[position]
         holder?.textViewName?.text = listUser.name
         holder?.textViewAddress?.text = listUser.genure
         holder?.textViewRating?.text = listUser.rating.toString()
@@ -33,8 +33,8 @@ class ListAdapter(val listmodel: ArrayList<ListModel>) : RecyclerView.Adapter<Li
 
     }
 
-    fun getnameAtPosition(pos: Int): ListModel {
-        val listUser: ListModel = listmodel[pos]
+    fun getnameAtPosition(pos: Int): MovieListModel {
+        val listUser: MovieListModel = listmodel[pos]
         return listUser
 
     }

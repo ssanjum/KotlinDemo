@@ -1,92 +1,123 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_animation_list"
-    android:orientation="vertical"
-    tools:context="com.example.sanjum.kotlindemo.fragments.MoviesFragment">
+    android:background="@drawable/gradient_animation_list">
 
-    <ImageView
-        android:id="@+id/fr_imageview"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:padding="5dp"
-        android:scaleType="fitXY"
-        tools:src="@drawable/madmax" />
 
-    <TextView
-        android:id="@+id/fr_title"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:text="Movie Title"
-        android:textColor="@color/aqua"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.sanjum.kotlindemo.fragments.MoviesFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginTop="22dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/fr_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            tools:src="@drawable/madmax" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IMDB Rating:"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/fr_rating"
+            android:id="@+id/fr_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="8.3"
-            android:textSize="22sp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Movie Title"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="80dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Year of Realease:"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/fr_year"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="1990"
-            android:textSize="18sp"
-            android:textStyle="italic" />
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="22dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IMDB Rating:"
+                android:textColor="@color/navy"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fr_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="8.3"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year of Realease:"
+                android:textColor="@color/navy"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fr_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="1990"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:textColor="@color/navy"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fr_mtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Action"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:text="@string/castAndCrew"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-</LinearLayout>
+</ScrollView>
