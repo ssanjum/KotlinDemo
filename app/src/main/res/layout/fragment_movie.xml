@@ -7,7 +7,7 @@
     tools:context="com.example.sanjum.kotlindemo.fragments.MoviesFragment">
 
     <ImageView
-        android:id="@+id/movie_imageview"
+        android:id="@+id/fr_imageview"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:padding="5dp"
@@ -15,7 +15,7 @@
         tools:src="@drawable/madmax" />
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/fr_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

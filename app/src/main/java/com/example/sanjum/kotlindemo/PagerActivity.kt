@@ -27,7 +27,7 @@ class PagerActivity : AppCompatActivity() {
         var listmodel: ListModel = intent.getSerializableExtra("LIST") as ListModel
         customPagerAdapter = CustomPagerAdapter(supportFragmentManager)
         customPagerAdapter?.addFragment(MoviesFragment().newInstance(listmodel), "Movies")
-        customPagerAdapter?.addFragment(DetailsFragment(), "Details")
+        customPagerAdapter?.addFragment(DetailsFragment().newInstance(listmodel), "Details")
         pager.adapter = customPagerAdapter
         tabbLayout.setupWithViewPager(pager)
 

@@ -11,7 +11,6 @@ import com.example.sanjum.kotlindemo.ListModel
 
 import com.example.sanjum.kotlindemo.R
 import kotlinx.android.synthetic.main.fragment_movie.*
-import kotlinx.android.synthetic.main.item_layout.*
 
 
 /**
@@ -41,10 +40,10 @@ class MoviesFragment : Fragment() {
         bnd = arguments
 
         listmodel = bnd.getSerializable("name") as ListModel
-        tv_title.text=listmodel.name
+        fr_title.text=listmodel.name
         fr_year.text= listmodel.year.toString()
         fr_rating.text= listmodel.rating.toString()
-        movie_imageview.setImageResource(listmodel.imageId)
+        fr_imageview.setImageResource(listmodel.imageId)
         //var name:String=bnd.getString("name")
 
 
