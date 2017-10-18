@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnNextScreen.setOnClickListener(this)
         buttonAction.setOnClickListener(this)
         etText = findViewById(R.id.etText)
+
     }
 
     override fun onClick(v: View?) {
