@@ -6,7 +6,7 @@ import android.view.View
 import com.example.sanjum.kotlindemo.fragments.InfoFragment
 import com.example.sanjum.kotlindemo.fragments.MoviesFragment
 import kotlinx.android.synthetic.main.activity_pager.*
-import kotlinx.android.synthetic.main.appbar_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 class PagerActivity : AppCompatActivity() {
 

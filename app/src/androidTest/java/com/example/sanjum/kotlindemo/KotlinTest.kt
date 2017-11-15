@@ -16,6 +16,7 @@ import android.support.test.runner.AndroidJUnit4
 import android.support.v7.widget.RecyclerView
 import com.example.sanjum.kotlindemo.helper.AppHelper
 import org.hamcrest.Matchers.*
+import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -34,7 +35,9 @@ class KotlinTest {
 
         Thread.sleep(1000)
     }
-
+    @After
+    fun after() {
+    }
     @Test
     fun goToMovieList() {
         onView(withId(R.id.btnNext)).perform(click())

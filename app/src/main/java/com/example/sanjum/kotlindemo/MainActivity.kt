@@ -6,28 +6,19 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import kotlinx.android.synthetic.main.appbar_main.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var btnNextScreen: Button
-    lateinit var buttonAction: Button
-    var etText: EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar1)
         toolbar1.setTitleTextColor(resources.getColor(R.color.white))
-        /* supportActionBar?.setDisplayHomeAsUpEnabled(true)
-         supportActionBar?.setDisplayShowHomeEnabled(true)*/
-        btnNextScreen = findViewById(R.id.btnNext)
-        buttonAction = findViewById(R.id.button_action)
-        btnNextScreen.setOnClickListener(this)
-        buttonAction.setOnClickListener(this)
-        etText = findViewById(R.id.etText)
+        btnNext.setOnClickListener(this)
+        button_action.setOnClickListener(this)
 
     }
 
@@ -40,12 +31,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (v?.id == R.id.button_action) {
             if (etText?.text!!.isEmpty()) {
                 etText?.setText(R.string.welcome_msg)
-                buttonAction.setText("Clear Text")
+                button_action.setText("Clear Text")
             } else {
                 etText?.setText("")
-                buttonAction.setText("Show Text")
+                button_action.setText("Show Text")
             }
-
         }
 
     }

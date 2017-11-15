@@ -51,7 +51,7 @@ class InfoFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         if (v?.id == R.id.fr_dimage_button) {
-            val uri = Uri.parse(listmodel.trailerUrl) // missing 'http://' will cause crashed
+            val uri = Uri.parse("https://www.youtube.com/watch?v=3qUZueTMEQY") // missing 'http://' will cause crashed
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         }

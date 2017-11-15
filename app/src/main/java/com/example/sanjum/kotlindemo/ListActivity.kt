@@ -9,7 +9,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.LinearLayout
-import kotlinx.android.synthetic.main.appbar_main.*
+import kotlinx.android.synthetic.main.activity_list.*
+import kotlinx.android.synthetic.main.toolbar.*
 import org.jetbrains.anko.toast
 import java.util.ArrayList
 
@@ -20,7 +21,6 @@ class ListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list)
         setSupportActionBar(toolbar1)
         toolbar1.setTitleTextColor(resources.getColor(R.color.white))
-        //  toolbar1.setTitleTextColor(resources.getColor(R.color.purple))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         toolbar1.setNavigationOnClickListener(object : View.OnClickListener {
@@ -28,12 +28,12 @@ class ListActivity : AppCompatActivity() {
                 finish()
             }
         })
-        val recyClerView = findViewById<RecyclerView>(R.id.recyCler)
-        recyClerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
+
+        recyCler.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
         val data: ArrayList<MovieListModel>
         data = getData()
         val adapter = ListAdapter(data)
-        recyClerView.adapter = adapter
+        recyCler.adapter = adapter
 
         adapter.setOnListClickListener(object : ListAdapter.OnListClickListener {
             override fun onItemClick(pos: Int) {
